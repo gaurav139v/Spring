@@ -3,6 +3,7 @@ package com.springcore.stereo;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 /*
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
  *  if that field blank then object name will be according to standard variable naming convention example (student) first letter samll.
 */
 @Component("obj") 
+@Scope("prototype") // Bean scope : IOC will create new object every time when someone request object.
 public class Student {
 	@Value("Gaurav") // to store value in reference variable otherwise it will have null
 	private String name;

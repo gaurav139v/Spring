@@ -22,5 +22,8 @@
 		<value>Pune</value>
 	</util:list>
 	
+	<bean class="com.springcore.stereo.Teacher" name="teacher" scope="prototype">
+	
+	</bean>
 
 </beans>
