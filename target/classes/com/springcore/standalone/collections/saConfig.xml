@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/util
+	http://www.springframework.org/schema/util/spring-util.xsd">
+	
+	<!-- Standalone can be used by multiple beans -->
+	<!-- We have to add schema and link for util to use this -->
+
+	<!-- standalone list -->
+	<util:list list-class="java.util.Vector" id="myBestFriends">
+		<value>Aman</value>
+		<value>Raj</value>
+		<value>Pooja</value>
+	</util:list>
+	
+	<!-- standalone map -->
+	<util:map map-class="java.util.TreeMap" id="fees">
+		<entry key="java" value="1000" />
+		<entry key="C++" value="2000" />
+		<entry key="Assembly" value="6000" />
+	</util:map>
+	
+	<!-- standalone properties -->
+	<util:properties id="dbconfig">
+		<prop key="System">Windows</prop>
+		<prop key="Username">root</prop>
+		<prop key="password">12345</prop>
+	</util:properties>
+	
+	<bean class="com.springcore.standalone.collections.Person" name="person1">
+	
+		<property name="friends" ref="myBestFriends" />
+		<property name="feeStructure" ref="fees" />
+		<property name="props" ref="dbconfig" />
+		
+		<!-- 
+		<property name="friends">
+			<ref bean="myBestFriends" />
+		</property> 
+		-->
+		
+	</bean>
+
+</beans>
