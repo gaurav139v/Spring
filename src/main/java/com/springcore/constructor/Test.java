@@ -18,7 +18,6 @@ public class Test {
 		// we can use index attribute in xml to variable order.
 		Addition add = (Addition) context.getBean("add");
 		add.doSum();
-
 	}
 
 }

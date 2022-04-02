@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+<!-- 
+From java 9 onward @PostConstruct and @PreDestroy these two annotaion removed because it
+was a part of Java EE 
+we have add depencency ot use these from java 9 onwards
+ -->
+<!-- This will enable all the annotation in spring framework -->
+<!-- <context:annotation-config /> -->
+
+<!-- This will enable only @PostConstruct and @PreDestroy annoation -->
+<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
+
+<!--  This is way to call init and destroy using annotations -->
+<bean class="com.springcore.lifeCycle.Chaat" name="chaat1">
+ <property name="price" value="20"></property>
+</bean>
+
+<!-- This is the way to call init and destroy method using xml -->
+<bean class="com.springcore.lifeCycle.Samosa" name="samosa1" 
+p:price="10" init-method="init" destroy-method="destory"/>
+
+
+<!-- This is way to call init and destroy using Interface (InitializingBean, DisposableBean) -->
+<bean class="com.springcore.lifeCycle.Pepsi" name="pepsi1">
+	<property name="Price" value="5"></property>
+</bean>
+
+
+
+</beans>
