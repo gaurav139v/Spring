@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	
+	<bean class="com.springcore.auto.wire.Address" name="address">
+		<property name="street" value="Sharda colony" />
+		<property name="city" value="Jabalpur" />
+	</bean>
+	
+	<!-- check by reference variable name (reference variable should match with bean name) -->
+	<!-- this uses setter injection to inject dependencies -->
+	<bean class="com.springcore.auto.wire.Employee" name ="emp1" autowire="byName" />
+	
+	<!-- check by type - this check the type of reference variable with the beans types available -->
+	<!-- if more then one beans available for same type then raise the exceptions saying found two or more beans expected single -->
+	<!-- this uses setter injection to inject dependencies -->
+	<bean class="com.springcore.auto.wire.Employee" name ="emp2" autowire="byType" />
+	
+	<!-- this uses constructor to auto wire the object -->
+	<!-- this uses reference variable name to match beans --> 
+	<bean class="com.springcore.auto.wire.Employee" name ="emp3" autowire="constructor" />
+	
+	
+</beans>
