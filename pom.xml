@@ -15,6 +15,8 @@
   </properties>
 
   <dependencies>
+  
+  	<!-- @PostConstruct and @destroy annotation removed from java version 9 so have add this dependency -->
 	<dependency>
 	    <groupId>javax.annotation</groupId>
 	    <artifactId>javax.annotation-api</artifactId>
@@ -35,6 +37,19 @@
 	    <version>5.1.20.RELEASE</version>
 	</dependency>
 
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-jdbc</artifactId>
+	    <version>5.1.20.RELEASE</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>5.1.36</version>
+	</dependency>
   
     <dependency>
       <groupId>junit</groupId>
