@@ -27,7 +27,7 @@ we have add depencency ot use these from java 9 onwards
 
 <!-- This is the way to call init and destroy method using xml -->
 <bean class="com.springcore.lifeCycle.Samosa" name="samosa1" 
-p:price="10" init-method="init" destroy-method="destory"/>
+p:price="10" init-method="init" destroy-method="destory1"/>
 
 
 <!-- This is way to call init and destroy using Interface (InitializingBean, DisposableBean) -->

@@ -28,7 +28,7 @@ public class Samosa {
 	}
 	
 	// method name can be anything bug same name should be same in config xml
-	public void destory() {
+	public void destory1() {
 		System.out.println("Insdie destory method (Samosa)");
 	}
 }

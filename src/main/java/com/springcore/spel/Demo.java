@@ -17,7 +17,7 @@ public class Demo {
 	@Value("#{T(java.lang.Math).sqrt(25)}") // call static method
 	private double z;
 	
-	@Value(" #{T(java.lang.Math).E} ")  // call static method
+	@Value(" #{T(java.lang.Math).E} ")  // call static variable
 	private double e;
 	
 	@Value("#{new java.lang.String('Gaurav Verma')}") // any object ex: Integer, Student etc.

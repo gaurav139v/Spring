@@ -15,14 +15,14 @@ public class Test {
 		System.out.println(person.getFriends().getClass().getName());
 		
 		// use stand alone collection (map)
-		System.out.println("--------------------------------------------");
-		System.out.println(person.getFeeStructure().getClass().getName());
-		System.out.println(person.getFeeStructure());
-		
-		// use stand alone collection (properties)
-		System.out.println("--------------------------------------------");
-		System.out.println(person.getProps());
-		System.out.println(person.getProps().getClass().getName());
+//		System.out.println("--------------------------------------------");
+//		System.out.println(person.getFeeStructure().getClass().getName());
+//		System.out.println(person.getFeeStructure());
+//		
+//		// use stand alone collection (properties)
+//		System.out.println("--------------------------------------------");
+//		System.out.println(person.getProps());
+//		System.out.println(person.getProps().getClass().getName());
 		
 		
 	}
